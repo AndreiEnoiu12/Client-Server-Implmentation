@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://webservice" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax22="http://io.java/xsd" xmlns:ax21="http://rmi.java/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://rmi.java/xsd" xmlns:ax23="http://io.java/xsd">
+            <xs:import namespace="http://io.java/xsd"/>
+            <xs:import namespace="http://io.java/xsd"/>
+            <xs:complexType name="RemoteException">
+                <xs:complexContent>
+                    <xs:extension base="ax22:IOException">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="cause" nillable="true" type="xs:anyType"/>
+                            <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+        </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+            <xs:complexType name="IOException">
+                <xs:sequence/>
+            </xs:complexType>
+        </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice" xmlns:ax24="http://rmi.java/xsd">
+            <xs:import namespace="http://rmi.java/xsd"/>
+            <xs:element name="WSInterfaceRemoteException">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="RemoteException" nillable="true" type="ax21:RemoteException"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="trackCarParts">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="trackCarPartsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPalletByQuantity">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                        <xs:element name="args3" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPalletByQuantityResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPallet">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPalletResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPackageByQuantity">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                        <xs:element name="args3" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPackageByQuantityResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPackage">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartFromPackageResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePart">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePartResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePallet">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="args0" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePalletResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePackage">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="args0" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removePackageResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removeCar">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="removeCarResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="putPartsOnPallet">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                        <xs:element name="args3" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="putPartsOnPalletResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="putPartOnPallet">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="putPartOnPalletResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="putPartIntoPackage">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="putPartIntoPackageResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPartWithQuantity">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                        <xs:element name="args3" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPartWithQuantityResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPart">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPartResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPallet">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="args0" type="xs:int"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPalletResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPackage">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertPackageResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertCar">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                        <xs:element name="args2" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertCarResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPartsForPallet">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="args0" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPartsForPalletResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPartsForPackage">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="args0" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPartsForPackageResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPallets">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPalletsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPackages">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPackagesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getLastPalletID">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getLastPalletIDResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getLastPackageID">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getLastPackageIDResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCars">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCarsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WSInterfaceRemoteException">
+    <wsdl:part name="parameters" element="ns:WSInterfaceRemoteException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putPartIntoPackageRequest">
+    <wsdl:part name="parameters" element="ns:putPartIntoPackage">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPalletByQuantityRequest">
+    <wsdl:part name="parameters" element="ns:removePartFromPalletByQuantity">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLastPackageIDResponse">
+    <wsdl:part name="parameters" element="ns:getLastPackageIDResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPalletsResponse">
+    <wsdl:part name="parameters" element="ns:getPalletsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLastPackageIDRequest">
+    <wsdl:part name="parameters" element="ns:getLastPackageID">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartsForPalletRequest">
+    <wsdl:part name="parameters" element="ns:getPartsForPallet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPackagesRequest">
+    <wsdl:part name="parameters" element="ns:getPackages">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPalletByQuantityResponse">
+    <wsdl:part name="parameters" element="ns:removePartFromPalletByQuantityResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPackageByQuantityRequest">
+    <wsdl:part name="parameters" element="ns:removePartFromPackageByQuantity">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="trackCarPartsResponse">
+    <wsdl:part name="parameters" element="ns:trackCarPartsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCarsResponse">
+    <wsdl:part name="parameters" element="ns:getCarsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPartWithQuantityResponse">
+    <wsdl:part name="parameters" element="ns:insertPartWithQuantityResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPackageByQuantityResponse">
+    <wsdl:part name="parameters" element="ns:removePartFromPackageByQuantityResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertCarRequest">
+    <wsdl:part name="parameters" element="ns:insertCar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPackageRequest">
+    <wsdl:part name="parameters" element="ns:removePartFromPackage">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPartResponse">
+    <wsdl:part name="parameters" element="ns:insertPartResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPartRequest">
+    <wsdl:part name="parameters" element="ns:insertPart">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPackagesResponse">
+    <wsdl:part name="parameters" element="ns:getPackagesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="trackCarPartsRequest">
+    <wsdl:part name="parameters" element="ns:trackCarParts">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPalletResponse">
+    <wsdl:part name="parameters" element="ns:removePartFromPalletResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertCarResponse">
+    <wsdl:part name="parameters" element="ns:insertCarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPackageResponse">
+    <wsdl:part name="parameters" element="ns:insertPackageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePalletRequest">
+    <wsdl:part name="parameters" element="ns:removePallet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLastPalletIDRequest">
+    <wsdl:part name="parameters" element="ns:getLastPalletID">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartsForPalletResponse">
+    <wsdl:part name="parameters" element="ns:getPartsForPalletResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartsForPackageResponse">
+    <wsdl:part name="parameters" element="ns:getPartsForPackageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLastPalletIDResponse">
+    <wsdl:part name="parameters" element="ns:getLastPalletIDResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePackageRequest">
+    <wsdl:part name="parameters" element="ns:removePackage">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putPartsOnPalletRequest">
+    <wsdl:part name="parameters" element="ns:putPartsOnPallet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartRequest">
+    <wsdl:part name="parameters" element="ns:removePart">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartResponse">
+    <wsdl:part name="parameters" element="ns:removePartResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPalletRequest">
+    <wsdl:part name="parameters" element="ns:removePartFromPallet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putPartOnPalletRequest">
+    <wsdl:part name="parameters" element="ns:putPartOnPallet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putPartsOnPalletResponse">
+    <wsdl:part name="parameters" element="ns:putPartsOnPalletResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePartFromPackageResponse">
+    <wsdl:part name="parameters" element="ns:removePartFromPackageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putPartIntoPackageResponse">
+    <wsdl:part name="parameters" element="ns:putPartIntoPackageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCarRequest">
+    <wsdl:part name="parameters" element="ns:removeCar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePackageResponse">
+    <wsdl:part name="parameters" element="ns:removePackageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCarResponse">
+    <wsdl:part name="parameters" element="ns:removeCarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="putPartOnPalletResponse">
+    <wsdl:part name="parameters" element="ns:putPartOnPalletResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPalletResponse">
+    <wsdl:part name="parameters" element="ns:insertPalletResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPalletsRequest">
+    <wsdl:part name="parameters" element="ns:getPallets">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePalletResponse">
+    <wsdl:part name="parameters" element="ns:removePalletResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPartWithQuantityRequest">
+    <wsdl:part name="parameters" element="ns:insertPartWithQuantity">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCarsRequest">
+    <wsdl:part name="parameters" element="ns:getCars">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPartsForPackageRequest">
+    <wsdl:part name="parameters" element="ns:getPartsForPackage">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPackageRequest">
+    <wsdl:part name="parameters" element="ns:insertPackage">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertPalletRequest">
+    <wsdl:part name="parameters" element="ns:insertPallet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WSInterfacePortType">
+    <wsdl:operation name="removePackage">
+      <wsdl:input message="ns:removePackageRequest" wsaw:Action="urn:removePackage">
+    </wsdl:input>
+      <wsdl:output message="ns:removePackageResponse" wsaw:Action="urn:removePackageResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removePackageWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartIntoPackage">
+      <wsdl:input message="ns:putPartIntoPackageRequest" wsaw:Action="urn:putPartIntoPackage">
+    </wsdl:input>
+      <wsdl:output message="ns:putPartIntoPackageResponse" wsaw:Action="urn:putPartIntoPackageResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:putPartIntoPackageWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertCar">
+      <wsdl:input message="ns:insertCarRequest" wsaw:Action="urn:insertCar">
+    </wsdl:input>
+      <wsdl:output message="ns:insertCarResponse" wsaw:Action="urn:insertCarResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:insertCarWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartWithQuantity">
+      <wsdl:input message="ns:insertPartWithQuantityRequest" wsaw:Action="urn:insertPartWithQuantity">
+    </wsdl:input>
+      <wsdl:output message="ns:insertPartWithQuantityResponse" wsaw:Action="urn:insertPartWithQuantityResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:insertPartWithQuantityWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackageByQuantity">
+      <wsdl:input message="ns:removePartFromPackageByQuantityRequest" wsaw:Action="urn:removePartFromPackageByQuantity">
+    </wsdl:input>
+      <wsdl:output message="ns:removePartFromPackageByQuantityResponse" wsaw:Action="urn:removePartFromPackageByQuantityResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removePartFromPackageByQuantityWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackage">
+      <wsdl:input message="ns:removePartFromPackageRequest" wsaw:Action="urn:removePartFromPackage">
+    </wsdl:input>
+      <wsdl:output message="ns:removePartFromPackageResponse" wsaw:Action="urn:removePartFromPackageResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removePartFromPackageWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPallet">
+      <wsdl:input message="ns:getPartsForPalletRequest" wsaw:Action="urn:getPartsForPallet">
+    </wsdl:input>
+      <wsdl:output message="ns:getPartsForPalletResponse" wsaw:Action="urn:getPartsForPalletResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:getPartsForPalletWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPart">
+      <wsdl:input message="ns:insertPartRequest" wsaw:Action="urn:insertPart">
+    </wsdl:input>
+      <wsdl:output message="ns:insertPartResponse" wsaw:Action="urn:insertPartResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:insertPartWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeCar">
+      <wsdl:input message="ns:removeCarRequest" wsaw:Action="urn:removeCar">
+    </wsdl:input>
+      <wsdl:output message="ns:removeCarResponse" wsaw:Action="urn:removeCarResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removeCarWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPackageID">
+      <wsdl:input message="ns:getLastPackageIDRequest" wsaw:Action="urn:getLastPackageID">
+    </wsdl:input>
+      <wsdl:output message="ns:getLastPackageIDResponse" wsaw:Action="urn:getLastPackageIDResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:getLastPackageIDWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPackage">
+      <wsdl:input message="ns:insertPackageRequest" wsaw:Action="urn:insertPackage">
+    </wsdl:input>
+      <wsdl:output message="ns:insertPackageResponse" wsaw:Action="urn:insertPackageResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:insertPackageWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPackage">
+      <wsdl:input message="ns:getPartsForPackageRequest" wsaw:Action="urn:getPartsForPackage">
+    </wsdl:input>
+      <wsdl:output message="ns:getPartsForPackageResponse" wsaw:Action="urn:getPartsForPackageResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:getPartsForPackageWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCars">
+      <wsdl:input message="ns:getCarsRequest" wsaw:Action="urn:getCars">
+    </wsdl:input>
+      <wsdl:output message="ns:getCarsResponse" wsaw:Action="urn:getCarsResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:getCarsWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPallets">
+      <wsdl:input message="ns:getPalletsRequest" wsaw:Action="urn:getPallets">
+    </wsdl:input>
+      <wsdl:output message="ns:getPalletsResponse" wsaw:Action="urn:getPalletsResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:getPalletsWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePart">
+      <wsdl:input message="ns:removePartRequest" wsaw:Action="urn:removePart">
+    </wsdl:input>
+      <wsdl:output message="ns:removePartResponse" wsaw:Action="urn:removePartResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removePartWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePallet">
+      <wsdl:input message="ns:removePalletRequest" wsaw:Action="urn:removePallet">
+    </wsdl:input>
+      <wsdl:output message="ns:removePalletResponse" wsaw:Action="urn:removePalletResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removePalletWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPallet">
+      <wsdl:input message="ns:removePartFromPalletRequest" wsaw:Action="urn:removePartFromPallet">
+    </wsdl:input>
+      <wsdl:output message="ns:removePartFromPalletResponse" wsaw:Action="urn:removePartFromPalletResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removePartFromPalletWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPalletID">
+      <wsdl:input message="ns:getLastPalletIDRequest" wsaw:Action="urn:getLastPalletID">
+    </wsdl:input>
+      <wsdl:output message="ns:getLastPalletIDResponse" wsaw:Action="urn:getLastPalletIDResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:getLastPalletIDWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartOnPallet">
+      <wsdl:input message="ns:putPartOnPalletRequest" wsaw:Action="urn:putPartOnPallet">
+    </wsdl:input>
+      <wsdl:output message="ns:putPartOnPalletResponse" wsaw:Action="urn:putPartOnPalletResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:putPartOnPalletWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPalletByQuantity">
+      <wsdl:input message="ns:removePartFromPalletByQuantityRequest" wsaw:Action="urn:removePartFromPalletByQuantity">
+    </wsdl:input>
+      <wsdl:output message="ns:removePartFromPalletByQuantityResponse" wsaw:Action="urn:removePartFromPalletByQuantityResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:removePartFromPalletByQuantityWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackages">
+      <wsdl:input message="ns:getPackagesRequest" wsaw:Action="urn:getPackages">
+    </wsdl:input>
+      <wsdl:output message="ns:getPackagesResponse" wsaw:Action="urn:getPackagesResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:getPackagesWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trackCarParts">
+      <wsdl:input message="ns:trackCarPartsRequest" wsaw:Action="urn:trackCarParts">
+    </wsdl:input>
+      <wsdl:output message="ns:trackCarPartsResponse" wsaw:Action="urn:trackCarPartsResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:trackCarPartsWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPallet">
+      <wsdl:input message="ns:insertPalletRequest" wsaw:Action="urn:insertPallet">
+    </wsdl:input>
+      <wsdl:output message="ns:insertPalletResponse" wsaw:Action="urn:insertPalletResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:insertPalletWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartsOnPallet">
+      <wsdl:input message="ns:putPartsOnPalletRequest" wsaw:Action="urn:putPartsOnPallet">
+    </wsdl:input>
+      <wsdl:output message="ns:putPartsOnPalletResponse" wsaw:Action="urn:putPartsOnPalletResponse">
+    </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException" message="ns:WSInterfaceRemoteException" wsaw:Action="urn:putPartsOnPalletWSInterfaceRemoteException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSInterfaceSoap11Binding" type="ns:WSInterfacePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="removePackage">
+      <soap:operation soapAction="urn:removePackage" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartIntoPackage">
+      <soap:operation soapAction="urn:putPartIntoPackage" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertCar">
+      <soap:operation soapAction="urn:insertCar" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartWithQuantity">
+      <soap:operation soapAction="urn:insertPartWithQuantity" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackageByQuantity">
+      <soap:operation soapAction="urn:removePartFromPackageByQuantity" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPallet">
+      <soap:operation soapAction="urn:getPartsForPallet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackage">
+      <soap:operation soapAction="urn:removePartFromPackage" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPart">
+      <soap:operation soapAction="urn:insertPart" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeCar">
+      <soap:operation soapAction="urn:removeCar" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPackageID">
+      <soap:operation soapAction="urn:getLastPackageID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPackage">
+      <soap:operation soapAction="urn:insertPackage" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPackage">
+      <soap:operation soapAction="urn:getPartsForPackage" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCars">
+      <soap:operation soapAction="urn:getCars" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPallets">
+      <soap:operation soapAction="urn:getPallets" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePart">
+      <soap:operation soapAction="urn:removePart" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePallet">
+      <soap:operation soapAction="urn:removePallet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPallet">
+      <soap:operation soapAction="urn:removePartFromPallet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPalletID">
+      <soap:operation soapAction="urn:getLastPalletID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartOnPallet">
+      <soap:operation soapAction="urn:putPartOnPallet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPalletByQuantity">
+      <soap:operation soapAction="urn:removePartFromPalletByQuantity" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackages">
+      <soap:operation soapAction="urn:getPackages" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trackCarParts">
+      <soap:operation soapAction="urn:trackCarParts" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPallet">
+      <soap:operation soapAction="urn:insertPallet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartsOnPallet">
+      <soap:operation soapAction="urn:putPartsOnPallet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSInterfaceSoap12Binding" type="ns:WSInterfacePortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="removePackage">
+      <soap12:operation soapAction="urn:removePackage" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartIntoPackage">
+      <soap12:operation soapAction="urn:putPartIntoPackage" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertCar">
+      <soap12:operation soapAction="urn:insertCar" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartWithQuantity">
+      <soap12:operation soapAction="urn:insertPartWithQuantity" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackageByQuantity">
+      <soap12:operation soapAction="urn:removePartFromPackageByQuantity" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPallet">
+      <soap12:operation soapAction="urn:getPartsForPallet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackage">
+      <soap12:operation soapAction="urn:removePartFromPackage" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPart">
+      <soap12:operation soapAction="urn:insertPart" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeCar">
+      <soap12:operation soapAction="urn:removeCar" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPackageID">
+      <soap12:operation soapAction="urn:getLastPackageID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPackage">
+      <soap12:operation soapAction="urn:insertPackage" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPackage">
+      <soap12:operation soapAction="urn:getPartsForPackage" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCars">
+      <soap12:operation soapAction="urn:getCars" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPallets">
+      <soap12:operation soapAction="urn:getPallets" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePart">
+      <soap12:operation soapAction="urn:removePart" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePallet">
+      <soap12:operation soapAction="urn:removePallet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPallet">
+      <soap12:operation soapAction="urn:removePartFromPallet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPalletID">
+      <soap12:operation soapAction="urn:getLastPalletID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartOnPallet">
+      <soap12:operation soapAction="urn:putPartOnPallet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPalletByQuantity">
+      <soap12:operation soapAction="urn:removePartFromPalletByQuantity" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackages">
+      <soap12:operation soapAction="urn:getPackages" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trackCarParts">
+      <soap12:operation soapAction="urn:trackCarParts" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPallet">
+      <soap12:operation soapAction="urn:insertPallet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartsOnPallet">
+      <soap12:operation soapAction="urn:putPartsOnPallet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+        <soap12:fault name="WSInterfaceRemoteException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSInterfaceHttpBinding" type="ns:WSInterfacePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="removePackage">
+      <http:operation location="removePackage"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartIntoPackage">
+      <http:operation location="putPartIntoPackage"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertCar">
+      <http:operation location="insertCar"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartWithQuantity">
+      <http:operation location="insertPartWithQuantity"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackageByQuantity">
+      <http:operation location="removePartFromPackageByQuantity"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPallet">
+      <http:operation location="getPartsForPallet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPackage">
+      <http:operation location="removePartFromPackage"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPart">
+      <http:operation location="insertPart"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeCar">
+      <http:operation location="removeCar"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPackageID">
+      <http:operation location="getLastPackageID"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPackage">
+      <http:operation location="insertPackage"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPartsForPackage">
+      <http:operation location="getPartsForPackage"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCars">
+      <http:operation location="getCars"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPallets">
+      <http:operation location="getPallets"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePart">
+      <http:operation location="removePart"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePallet">
+      <http:operation location="removePallet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPallet">
+      <http:operation location="removePartFromPallet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPalletID">
+      <http:operation location="getLastPalletID"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartOnPallet">
+      <http:operation location="putPartOnPallet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePartFromPalletByQuantity">
+      <http:operation location="removePartFromPalletByQuantity"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPackages">
+      <http:operation location="getPackages"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trackCarParts">
+      <http:operation location="trackCarParts"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="insertPallet">
+      <http:operation location="insertPallet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putPartsOnPallet">
+      <http:operation location="putPartsOnPallet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml"/>
+      </wsdl:output>
+      <wsdl:fault name="WSInterfaceRemoteException">
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSInterface">
+    <wsdl:port name="WSInterfaceHttpSoap11Endpoint" binding="ns:WSInterfaceSoap11Binding">
+      <soap:address location="http://localhost:8080/axis2/services/WSInterface"/>
+    </wsdl:port>
+    <wsdl:port name="WSInterfaceHttpEndpoint" binding="ns:WSInterfaceHttpBinding">
+      <http:address location="http://localhost:8080/axis2/services/WSInterface"/>
+    </wsdl:port>
+    <wsdl:port name="WSInterfaceHttpSoap12Endpoint" binding="ns:WSInterfaceSoap12Binding">
+      <soap12:address location="http://localhost:8080/axis2/services/WSInterface"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

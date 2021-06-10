@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.7.7  Built on : Nov 20, 2017 (11:41:20 GMT) -->
+<serviceGroup>
+    <service name="WSInterface">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="skeleton.WSInterfaceMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">skeleton.WSInterfaceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="insertCar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:insertCar</actionMapping>
+            <outputActionMapping>urn:insertCarResponse</outputActionMapping>
+        </operation>
+        <operation name="putPartIntoPackage" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:putPartIntoPackage</actionMapping>
+            <outputActionMapping>urn:putPartIntoPackageResponse</outputActionMapping>
+        </operation>
+        <operation name="removePackage" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removePackage</actionMapping>
+            <outputActionMapping>urn:removePackageResponse</outputActionMapping>
+        </operation>
+        <operation name="removeCar" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removeCar</actionMapping>
+            <outputActionMapping>urn:removeCarResponse</outputActionMapping>
+        </operation>
+        <operation name="insertPart" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:insertPart</actionMapping>
+            <outputActionMapping>urn:insertPartResponse</outputActionMapping>
+        </operation>
+        <operation name="removePartFromPackage" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removePartFromPackage</actionMapping>
+            <outputActionMapping>urn:removePartFromPackageResponse</outputActionMapping>
+        </operation>
+        <operation name="getPartsForPallet" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:getPartsForPallet</actionMapping>
+            <outputActionMapping>urn:getPartsForPalletResponse</outputActionMapping>
+        </operation>
+        <operation name="insertPartWithQuantity" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:insertPartWithQuantity</actionMapping>
+            <outputActionMapping>urn:insertPartWithQuantityResponse</outputActionMapping>
+        </operation>
+        <operation name="removePartFromPackageByQuantity" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removePartFromPackageByQuantity</actionMapping>
+            <outputActionMapping>urn:removePartFromPackageByQuantityResponse</outputActionMapping>
+        </operation>
+        <operation name="removePart" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removePart</actionMapping>
+            <outputActionMapping>urn:removePartResponse</outputActionMapping>
+        </operation>
+        <operation name="getPallets" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:getPallets</actionMapping>
+            <outputActionMapping>urn:getPalletsResponse</outputActionMapping>
+        </operation>
+        <operation name="getCars" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:getCars</actionMapping>
+            <outputActionMapping>urn:getCarsResponse</outputActionMapping>
+        </operation>
+        <operation name="insertPackage" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:insertPackage</actionMapping>
+            <outputActionMapping>urn:insertPackageResponse</outputActionMapping>
+        </operation>
+        <operation name="getPartsForPackage" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:getPartsForPackage</actionMapping>
+            <outputActionMapping>urn:getPartsForPackageResponse</outputActionMapping>
+        </operation>
+        <operation name="getLastPackageID" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:getLastPackageID</actionMapping>
+            <outputActionMapping>urn:getLastPackageIDResponse</outputActionMapping>
+        </operation>
+        <operation name="putPartsOnPallet" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:putPartsOnPallet</actionMapping>
+            <outputActionMapping>urn:putPartsOnPalletResponse</outputActionMapping>
+        </operation>
+        <operation name="insertPallet" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:insertPallet</actionMapping>
+            <outputActionMapping>urn:insertPalletResponse</outputActionMapping>
+        </operation>
+        <operation name="trackCarParts" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:trackCarParts</actionMapping>
+            <outputActionMapping>urn:trackCarPartsResponse</outputActionMapping>
+        </operation>
+        <operation name="getPackages" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:getPackages</actionMapping>
+            <outputActionMapping>urn:getPackagesResponse</outputActionMapping>
+        </operation>
+        <operation name="removePartFromPalletByQuantity" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removePartFromPalletByQuantity</actionMapping>
+            <outputActionMapping>urn:removePartFromPalletByQuantityResponse</outputActionMapping>
+        </operation>
+        <operation name="getLastPalletID" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:getLastPalletID</actionMapping>
+            <outputActionMapping>urn:getLastPalletIDResponse</outputActionMapping>
+        </operation>
+        <operation name="putPartOnPallet" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:putPartOnPallet</actionMapping>
+            <outputActionMapping>urn:putPartOnPalletResponse</outputActionMapping>
+        </operation>
+        <operation name="removePartFromPallet" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removePartFromPallet</actionMapping>
+            <outputActionMapping>urn:removePartFromPalletResponse</outputActionMapping>
+        </operation>
+        <operation name="removePallet" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://WebService">
+            <actionMapping>urn:removePallet</actionMapping>
+            <outputActionMapping>urn:removePalletResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>
